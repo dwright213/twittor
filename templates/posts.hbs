@@ -1,14 +1,21 @@
 
+<p><a href="#" {{action 'sortByBody'}}>Sort by Body</a> | <a href="#" {{action 'sortByDate'}}>Sort by Date</a></p>
 <div class="row">
-  {{#each post in model}}
+  {{#each}}
 
-    <div class="col-md-4">
-      {{post.body}}
+    <div class="col-md-4 tweat-body">
+      <div class="col-md-12 tweet-inner">
+      {{body}}
+      </div>
 
-      <div class="col-md-12">
-        {{post.date}}
+      <div class="col-md-12 tweat-date">
+        {{date}}
       </div>
 
     </div>
   {{/each}}
+
+  <p>
+    {{#link-to 'new-post' classNames="btn btn-primary"}}Create Tweat{{/link-to}}
+  </p>
 </div>

@@ -4,6 +4,6 @@ Twittor.PostsRoute=Ember.Route.extend({
     this.render('posts');
   },
   model: function(){
-    return posts;
+    return this.store.find('post');
   }
 })

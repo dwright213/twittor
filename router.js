@@ -3,5 +3,6 @@ Twittor.Router.map(function(){
   this.resource('post2');
   this.resource('tweats');
   this.resource('about');
+  this.resource('new-post');
 
 });
